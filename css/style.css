@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-
+  background-color: #000;
   display: flex;
   flex-direction: column;
 }
@@ -17,37 +17,99 @@ main {
 
 /* SITE HERADER PART */
 
-#header-site {
-  
+.box {
+  width: 370px;
+  height: 570px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
 }
 
-.site-header {
-
+.box-content {
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+.box:hover .box-content {
+  position: relative;
+  top: 20%;
+  transform: rotateX(-180deg);
 }
 
-.herder-logo {
-
+.box-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://jewishbusinessnews.com/wp-content/uploads/2018/10/EDWARD-SNOWDEN-WORLDS-MOST-WANTED-FUGITIVE-TO-APPEAR-IN-ISRAEL-photo-credit-FPF.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(50px, 50px);
+  z-index: 11;
+  backface-visibility: hidden;
+  transition: all 1s ease;
 }
 
-.header-nav {
-
+.box-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  border: 1px solid #e9e0e07c;
+  border-radius: 10px;
+  transform: translate(50px, 50px);
+  transition: all 0.5s ease;
 }
 
-.herder-nav-list {
-
+.box-half {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #141414;
 }
 
-.herder-nav-item {
-
+.box-list {
+  position: absolute;
+  transform: translate(45%);
+  list-style: none;
+  transform: rotateX(-180deg);
+  top: 45%;
+  left: 23%;
 }
 
-/* SITE HERADER PART END */
+.box-item {
+  margin-right: 10px;
+}
+.box-item:not(:last-child(4)) {
+  margin-right: 0;
+}
 
+.box-title {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.7px;
+  color: #e9e0e07c;
+  transform: rotateX(180deg);
+}
 
-/* SITE MAIN PART  */
-
-
-
+.bx {
+  font-size: 36px;
+  color: #e9e0e07c;
+  transition: all 0.5s ease;
+}
+.bx:hover {
+  transform: scale(1.5);
+  color: #e9e0e0da;
+  transition: all 0.5s ease;
+}
 
 /* SITE MAIN END PART */
 
